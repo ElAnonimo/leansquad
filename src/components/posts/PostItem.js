@@ -23,11 +23,16 @@ const PostItem = ({ showPostBtn, updatePost, post }) => {
 		});
 	}, [post]);
 
-	const { title, body, id, author } = postData;
+	const {
+		title,
+		body,
+		id,
+		author
+	} = postData;
 
 	const onSubmit = evt => {
 		evt.preventDefault();
-		updatePost(id, postData);
+		updatePost(id, { title, body });
 	};
 
 	const onChange = evt => {
