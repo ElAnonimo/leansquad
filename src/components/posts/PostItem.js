@@ -33,13 +33,15 @@ PostItem.defaultProps = {
 	showPostBtn: true
 };
 
+// author and body were not marked as required since the posts received from the server could
+// have those not set
 PostItem.propTypes = {
 	showPostBtn: PropTypes.bool.isRequired,
 	post: PropTypes.shape({
 		id: PropTypes.number.isRequired,
 		title: PropTypes.string.isRequired,
 		author: PropTypes.string,
-		body: PropTypes.string.isRequired
+		body: PropTypes.string
 	}).isRequired
 };
 
